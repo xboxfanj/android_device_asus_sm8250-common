@@ -85,10 +85,6 @@ PRODUCT_PACKAGES += \
     android.hardware.boot@1.1-impl-qti.recovery \
     android.hardware.boot@1.1-service
 
-# Camera
-PRODUCT_PACKAGES += \
-    Snap
-
 # Common init scripts
 PRODUCT_PACKAGES += \
     init.asus.usb.rc \
@@ -200,15 +196,6 @@ PRODUCT_PACKAGES += \
 # System Helper
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.systemhelper@1.0
-
-# Telephony
-PRODUCT_PACKAGES += \
-    ims-ext-common \
-    ims_ext_common.xml \
-    qti-telephony-hidl-wrapper \
-    qti_telephony_hidl_wrapper.xml \
-    qti-telephony-utils \
-    qti_telephony_utils.xml
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/privapp-ims.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-ims.xml
