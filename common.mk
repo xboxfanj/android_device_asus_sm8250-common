@@ -79,16 +79,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     audio.a2dp.default
 
-# Boot control
+# Boot
 PRODUCT_PACKAGES += \
-    android.hardware.boot@1.0-impl \
-    android.hardware.boot@1.0-impl.recovery \
-    android.hardware.boot@1.0-service \
-    bootctrl.kona.recovery \
-    bootctrl.kona
-
-PRODUCT_PACKAGES_DEBUG += \
-    bootctl
+    android.hardware.boot@1.1-impl-qti \
+    android.hardware.boot@1.1-impl-qti.recovery \
+    android.hardware.boot@1.1-service
 
 # Camera
 PRODUCT_PACKAGES += \
@@ -149,6 +144,7 @@ PRODUCT_PACKAGES += \
 
 # fastbootd
 PRODUCT_PACKAGES += \
+    android.hardware.fastboot@1.0-impl-mock \
     fastbootd
 
 # Hotword Enrollement
