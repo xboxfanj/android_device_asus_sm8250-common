@@ -52,9 +52,6 @@ debug.sf.enable_hwc_vds=1
 # GPS
 persist.vendor.overlay.izat.optin=rro
 
-# IOP
-vendor.iop.enable_uxe=0
-
 # Media
 media.settings.xml=/vendor/etc/media_profiles_vendor.xml
 
@@ -64,15 +61,9 @@ persist.vendor.data.mode=concurrent
 # Radio
 ro.telephony.default_network=22,22
 
-# Runtime
-persist.device_config.runtime_native.usap_pool_enabled=true
-
 # Sensors
 persist.vendor.sensors.enable.mag_filter=true
 
 # Station
 vendor.station.hwid=none
 vendor.station.generation=none
-
-# Vendor
-ro.vendor.qti.va_aosp.support=1
