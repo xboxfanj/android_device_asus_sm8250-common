@@ -71,13 +71,8 @@ AB_OTA_POSTINSTALL_CONFIG += \
     FILESYSTEM_TYPE_vendor=ext4 \
     POSTINSTALL_OPTIONAL_vendor=true
 
-# ANT+
-PRODUCT_PACKAGES += \
-    AntHalService
-
-# Audio
-PRODUCT_PACKAGES += \
-    audio.a2dp.default
+# Board
+TARGET_BOARD_PLATFORM := kona
 
 # Boot
 PRODUCT_PACKAGES += \
@@ -97,47 +92,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/fstab.qcom:$(TARGET_COPY_OUT_RAMDISK)/fstab.qcom
 
-# Display
-#PRODUCT_PACKAGES += \
-#    android.hardware.graphics.mapper@3.0-impl-qti-display \
-#    vendor.qti.hardware.display.allocator-service \
-#    vendor.qti.hardware.display.composer-service \
-#    android.hardware.memtrack@1.0-impl \
-#    android.hardware.memtrack@1.0-service \
-#    gralloc.kona \
-#    memtrack.kona \
-#    libqdMetaData \
-#    libdisplayconfig.vendor \
-#    vendor.display.config@1.0.vendor \
-#    vendor.display.config@1.1.vendor \
-#    vendor.display.config@1.2.vendor \
-#    vendor.display.config@1.3.vendor \
-#    vendor.display.config@1.4.vendor \
-#    vendor.display.config@1.5.vendor \
-#    vendor.display.config@1.6.vendor \
-#    vendor.display.config@1.7.vendor \
-#    vendor.display.config@1.8.vendor \
-#    vendor.display.config@1.9.vendor \
-#    vendor.display.config@1.10.vendor \
-#    vendor.display.config@1.11.vendor \
-#    vendor.display.config@1.12.vendor \
-#    vendor.display.config@1.13.vendor \
-#    vendor.display.config@1.14.vendor \
-#    vendor.display.config@1.15.vendor \
-#    vendor.qti.hardware.display.mapper@1.0.vendor \
-#    vendor.qti.hardware.display.mapper@2.0.vendor \
-#    vendor.qti.hardware.display.mapper@3.0.vendor
-
-PRODUCT_PACKAGES += \
-    vendor.display.config@1.12
-
-# HIDL
-PRODUCT_PACKAGES += \
-    libhidltransport \
-    libhidltransport.vendor \
-    libhwbinder \
-    libhwbinder.vendor
-
 # fastbootd
 PRODUCT_PACKAGES += \
     android.hardware.fastboot@1.0-impl-mock \
@@ -152,38 +106,25 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     NfcNci \
     Tag \
-    SecureElement \
     com.android.nfc_extras
-
-# Net
-PRODUCT_PACKAGES += \
-    netutils-wrapper-1.0
-
-# Omx
-#PRODUCT_PACKAGES += \
-#    libc2dcolorconvert \
-#    libcodec2_hidl@1.0.vendor \
-#    libcodec2_vndk.vendor \
-#    libmm-omxcore \
-#    libOmxCore \
-#    libOmxAacEnc \
-#    libOmxAmrEnc \
-#    libOmxEvrcEnc \
-#    libOmxG711Enc \
-#    libOmxQcelp13Enc \
-#    libOmxVdec \
-#    libOmxVenc \
-#    libOmxVidcCommon \
-#    libstagefrighthw
-
-# Power
-PRODUCT_PACKAGES += \
-    android.hardware.power-service-qti
 
 # Protobuf
 PRODUCT_PACKAGES += \
     libprotobuf-cpp-full-vendorcompat \
     libprotobuf-cpp-lite-vendorcompat
+
+# QTI Components
+TARGET_COMMON_QTI_COMPONENTS := \
+    audio \
+    av \
+    bt \
+    display \
+    gps \
+    overlay \
+    perf \
+    telephony \
+    vibrator \
+    wfd
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
@@ -197,27 +138,14 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.systemhelper@1.0
 
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/privapp-ims.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-ims.xml
-
 # Update engine
 PRODUCT_PACKAGES += \
     update_engine \
     update_engine_sideload \
     update_verifier
 
-PRODUCT_PACKAGES_DEBUG += \
-    update_engine_client
-
 PRODUCT_BUILD_SUPER_PARTITION := false
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
-
-# Vibrator
-PRODUCT_PACKAGES += \
-    vendor.qti.hardware.vibrator.service
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/excluded-input-devices.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/excluded-input-devices.xml
 
 # VNDK
 PRODUCT_PACKAGES += \
