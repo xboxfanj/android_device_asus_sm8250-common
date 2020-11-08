@@ -124,6 +124,10 @@ BOARD_VENDOR_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor
 # Vendor Security patch level
 VENDOR_SECURITY_PATCH := 2020-12-01
 
+# Vendor init
+TARGET_INIT_VENDOR_LIB := libinit_asus_sm8250
+TARGET_RECOVERY_DEVICE_MODULES := libinit_asus_sm8250
+
 # Verified Boot
 BOARD_AVB_ENABLE := true
 BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --set_hashtree_disabled_flag
