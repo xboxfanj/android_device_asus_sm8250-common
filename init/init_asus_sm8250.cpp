@@ -61,6 +61,8 @@ void vendor_load_properties()
 {
 	std::string variant = GetProperty(PROP_VARIANT, "");
 
+	property_override("ro.adb.secure", "0");
+
 	// CPU
 	property_override_dual("dalvik.vm.isa.arm64.variant", "dalvik.vm.isa.arm64.variant", "cortex-a76");
 	property_override_dual("ro.bionic.cpu_variant", "ro.bionic.cpu_variant", "cortex-a76");
