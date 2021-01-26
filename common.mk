@@ -92,6 +92,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/fstab.qcom:$(TARGET_COPY_OUT_RAMDISK)/fstab.qcom
 
+# Display
+PRODUCT_PACKAGES += \
+    vendor.display.config@1.12
+
 # fastbootd
 PRODUCT_PACKAGES += \
     android.hardware.fastboot@1.0-impl-mock \
@@ -118,7 +122,6 @@ TARGET_COMMON_QTI_COMPONENTS := \
     audio \
     av \
     bt \
-    display \
     gps \
     media \
     overlay \
