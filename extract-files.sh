@@ -23,20 +23,11 @@ source "${HELPER}"
 
 function blob_fixup() {
     case "${1}" in
-        etc/permissions/qti_libpermissions.xml)
-            sed -i 's/<library name="android.hidl.manager-V1.0-java"/<library name="android.hidl.manager@1.0-java"/g' "${2}"
-            ;;
         vendor/etc/init/init.embmssl_server.rc)
             sed -i '/vendor.qti.hardware.embmssl@1.0::IEmbms/d' "${2}"
             ;;
         vendor/bin/hw/android.hardware.media.omx@1.0-service)
             sed -i "s/libavservices_minijail_vendor.so/libavservices_minijail.so\x00\x00\x00\x00\x00\x00\x00/" "${2}"
-            ;;
-        product/lib/libdpmframework.so)
-            sed -i "s/libhidltransport.so/libcutils-v29.so\x00\x00\x00/" "${2}"
-            ;;
-        product/lib64/libdpmframework.so)
-            sed -i "s/libhidltransport.so/libcutils-v29.so\x00\x00\x00/" "${2}"
             ;;
         vendor/bin/hw/android.hardware.neuralnetworks@1.2-service-qti)
             ;&
