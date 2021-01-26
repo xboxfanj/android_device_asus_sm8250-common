@@ -17,9 +17,9 @@
 /xrom(/.*)?             u:object_r:xrom_file:s0
 
 # Files in sysfs
-/sys/devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-02/c440000.qcom,spmi:qcom,pm8150b@2:qcom,qpnp-smb5/thermal_gpio                    u:object_r:sysfs_battery_supply:s0
-/sys/devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-02/c440000.qcom,spmi:qcom,pm8150b@2:qcom,qpnp-smb5/TypeC_Side_Detect2              u:object_r:sysfs_battery_supply:s0
-/sys/devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-02/c440000.qcom,spmi:qcom,pm8150b@2:vadc@3100/iio:device1/in_temp_wp_therm_input   u:object_r:sysfs_battery_supply:s0
+/sys/devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-02/c440000.qcom,spmi:qcom,pm8150b@2:qcom,qpnp-smb5/thermal_gpio                    u:object_r:vendor_sysfs_battery_supply:s0
+/sys/devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-02/c440000.qcom,spmi:qcom,pm8150b@2:qcom,qpnp-smb5/TypeC_Side_Detect2              u:object_r:vendor_sysfs_battery_supply:s0
+/sys/devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-02/c440000.qcom,spmi:qcom,pm8150b@2:vadc@3100/iio:device1/in_temp_wp_therm_input   u:object_r:vendor_sysfs_battery_supply:s0
 /sys/devices/virtual/sensors(/.*)?                                                                                                          u:object_r:vendor_sysfs_sensors:s0
 
 # Binaries
