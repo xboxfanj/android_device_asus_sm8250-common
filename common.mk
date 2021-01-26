@@ -123,7 +123,6 @@ TARGET_COMMON_QTI_COMPONENTS := \
     av \
     bt \
     gps \
-    media \
     overlay \
     perf \
     telephony \
