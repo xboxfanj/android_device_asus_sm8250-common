@@ -43,10 +43,6 @@ product/lib64/vendor.display.color@1.2.so
 product/lib64/vendor.display.color@1.3.so
 -priv-app/AsusVisualMaster/AsusVisualMaster.apk
 
-# Hotword Enrollment
--product/priv-app/HotwordEnrollmentOKGoogleHEXAGON/HotwordEnrollmentOKGoogleHEXAGON.apk
--product/priv-app/HotwordEnrollmentXGoogleHEXAGON/HotwordEnrollmentXGoogleHEXAGON.apk
-
 # Power Off Alarm
 -product/app/PowerOffAlarm/PowerOffAlarm.apk
 
