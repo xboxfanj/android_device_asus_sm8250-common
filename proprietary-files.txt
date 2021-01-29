@@ -4,9 +4,6 @@
 product/lib/com.qualcomm.qti.ant@1.0.so
 product/lib64/com.qualcomm.qti.ant@1.0.so
 
-# Bluetooth (aptX)
--app/aptxals/aptxals.apk
-
 # Camera
 lib64/DataSet/arch/DIT_List.cfg
 lib64/DataSet/ditSCidGen/msgchk.db
